@@ -1,0 +1,98 @@
+# Hospital Readmission Prediction
+
+## Case Study
+
+**Hospital Readmission Prediction using Logistic Regression with L2 Regularization**
+
+The aim of this project is to predict whether a patient will be **readmitted to the hospital within 30 days** using patient-related features.
+
+## Features Used
+
+- Age
+- Heart Rate
+- Blood Pressure
+- Previous Hospital Visits
+- Length of Stay
+- Diagnosis Code
+
+## Machine Learning Algorithm
+
+The project uses **Logistic Regression with L2 regularization**.
+
+L2 regularization helps reduce overfitting by penalizing large model coefficients.
+
+## Evaluation
+
+The model is evaluated using:
+
+- ROC-AUC Score
+- Confusion Matrix
+- Classification Report
+- False Positive and False Negative counts
+
+### Clinical Cost
+
+**False Negative:** The model predicts that a patient will not be readmitted, but the patient is actually readmitted. This can be clinically important because the patient may miss additional monitoring or follow-up.
+
+**False Positive:** The model predicts that a patient will be readmitted, but the patient is not readmitted. This can result in unnecessary monitoring, tests, or use of healthcare resources.
+
+## Dataset
+
+This project contains **10 sample patient records** created for educational demonstration.
+
+The dataset is intentionally small and synthetic. Therefore, the ROC-AUC and other evaluation metrics should **not** be interpreted as evidence of real-world clinical performance.
+
+## Project Files
+
+```text
+hospital-readmission-prediction/
+│
+├── hospital_readmission.py
+├── Hospital_Readmission_Prediction.ipynb
+├── requirements.txt
+└── README.md
+```
+
+## How to Run in Python
+
+### 1. Clone the repository
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
+
+### 2. Open the project folder
+
+```bash
+cd hospital-readmission-prediction
+```
+
+### 3. Install the required libraries
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the Python program
+
+```bash
+python hospital_readmission.py
+```
+
+The program will display the patient data, ROC-AUC score, confusion matrix, classification report, and clinical cost discussion.
+
+## Run the Notebook
+
+The file `Hospital_Readmission_Prediction.ipynb` contains the same code and a saved output.
+
+You can open the notebook in **Google Colab** or **Jupyter Notebook** and run the cells again.
+
+## Expected Output
+
+With the included 10-patient sample data and the fixed train/test split, the demonstration produces a ROC-AUC score of approximately:
+
+```text
+ROC-AUC Score: 1.0
+```
+
+Because the dataset is very small and synthetic, this high score does **not** mean the model would perform perfectly on real hospital data.
